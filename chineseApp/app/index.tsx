@@ -1,19 +1,21 @@
-import { StyleSheet, Text, View } from "react-native";
+// App.tsx
+import React from 'react';
+import { StyleSheet, SafeAreaView } from 'react-native';
+import Timeline from '../components/Timeline';
 
-export default function Index() {
-    const style = StyleSheet.create({
-        container : {
-            flex: 1,
-            fontSize:3,
-            
-        }
-        })
+const App: React.FC = () => {
   return (
-    <View style = {style.container}>
-      <Text>Edit app/index.tsx to edit this screen.</Text>
-    </View>
-
-
+    <SafeAreaView style={styles.container}>
+      <Timeline />
+    </SafeAreaView>
   );
-  
-}
+};
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+  },
+});
+
+export default App;
